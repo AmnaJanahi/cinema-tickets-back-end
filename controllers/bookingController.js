@@ -41,7 +41,7 @@ async function showBooking(req, res) {
 
 async function deleteBooking(req, res) {
   try {
-    const booking = await booking.findByIdAndDelete(req.params.id);
+    const booking = await Booking.findByIdAndDelete(req.params.id);
     if (booking) {
       res.status(200).json(booking);
     } else {
@@ -54,7 +54,7 @@ async function deleteBooking(req, res) {
 
 async function updateBooking(req, res) {
   try {
-    const booking = await booking.findByIdAndUpdate(req.params.id, req.body, {
+    const booking = await Booking.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     if (booking) {
