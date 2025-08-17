@@ -41,9 +41,24 @@ async function showBooking(req, res) {
 
 async function deleteBooking(req, res) {
   try {
-    const Booking = await Booking.findByIdAndDelete(req.params.id);
-    if (Booking) {
-      res.status(200).json(Booking);
+    const booking = await booking.findByIdAndDelete(req.params.id);
+    if (booking) {
+      res.status(200).json(booking);
+    } else {
+      res.sendStatus(404);
+    }
+  } catch (err) {
+    res.status(500).json({ error: err.massage });
+  }
+}
+
+async function updateBooking(req, res) {
+  try {
+    const booking = await booking.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    if (booking) {
+      res.status(200).json(booking);
     } else {
       res.sendStatus(404);
     }
@@ -56,5 +71,6 @@ module.exports = {
   createBooking,
   bookingIndex,
   showBooking,
-  deleteBooking
+  deleteBooking,
+  updateBooking
 };
