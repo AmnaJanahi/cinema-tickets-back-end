@@ -27,7 +27,22 @@ async function bookingIndex(req, res) {
     }
 }
 
+async function showBooking(req, res){
+    try{
+        const booking = await Booking.findById(req.params.id)
+        if(booking){
+            res.status(200).json(booking)
+        }else{
+            res.sendStatus(404)
+        }
+    }catch(err){
+        res.status(500).json({error: err.massage})
+    }
+
+}
+
 module.exports = {
     createBooking,
-    bookingIndex
+    bookingIndex,
+    showBooking
 }
