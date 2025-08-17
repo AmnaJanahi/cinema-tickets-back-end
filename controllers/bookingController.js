@@ -13,8 +13,21 @@ async function createBooking(req, res) {
 }
 
 
-
+async function bookingIndex(req, res) {
+    try {
+        const allbooking = await Booking.find()
+        if (allbooking.length) {
+            res.status(200).json(allbooking)
+        } else {
+            res.sendStatus(204)
+        }
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({ error: err.message })
+    }
+}
 
 module.exports = {
-    createBooking
+    createBooking,
+    bookingIndex
 }
