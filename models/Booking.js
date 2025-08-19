@@ -2,11 +2,11 @@ const { Schema, model } = require("mongoose");
 
 const bookingSchema = new Schema(
   {
-    movieId: {
-      type: Schema.Types.ObjectId,
-      ref: "Movie",
-      required: true,
-    },
+    // movieId: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "Movie",
+    //   required: true,
+    // },
     name: {
       type: String,
       required: true,
@@ -20,10 +20,10 @@ const bookingSchema = new Schema(
   //     enum: ["13:00", "15:30", "17:45", "19:30", "23:00", "00:15"],
   //     required: true,
   //   },
-  //   seat: {
+  //   seat: [{
   //     type: String,
-  //     required: true,
-  //   },
+  //     required: true
+  //   }],
   //   userId: {
   //     type: mongoose.Schema.Types.ObjectId,
   //     ref: "User",
