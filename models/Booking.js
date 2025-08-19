@@ -2,11 +2,11 @@ const { Schema, model } = require("mongoose");
 
 const bookingSchema = new Schema(
   {
-    movieId: {
-      type: Schema.Types.ObjectId,
-      ref: "Movie",
-      required: true,
-    },
+    // movieId: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "Movie",
+    //   required: true,
+    // },
     name: {
       type: String,
       required: true,
