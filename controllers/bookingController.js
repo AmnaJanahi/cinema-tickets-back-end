@@ -76,7 +76,7 @@ async function getOccupiedSeats(req, res) {
     }
 
     const bookings = await Booking.find({ movieId, date, timing });
-    const occupiedSeats = bookings.map(b => b.seat);
+    const occupiedSeats = bookings.map(booking => booking.seat);
 
     res.status(200).json({ occupied: occupiedSeats });
   } catch (err) {
