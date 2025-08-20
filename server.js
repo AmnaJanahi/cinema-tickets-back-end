@@ -6,6 +6,7 @@ const cors = require('cors')
 
 const bookingRoutes = require('./routes/bookingRoutes')
 const authRoutes = require('./routes/authRoutes')
+const movieRoutes = require('./routes/moviesRoutes')
 
 
 dotenv.config()
@@ -23,6 +24,7 @@ app.use(express.json())
 app.use(logger('dev'))
 app.use('/auth',authRoutes)
 app.use('/booking', bookingRoutes)
+app.use('/movie', movieRoutes)
 
 
 app.listen(3000, () => {
