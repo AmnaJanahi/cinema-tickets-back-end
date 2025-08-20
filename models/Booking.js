@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
+
 const bookingSchema = new Schema({
   movieId: {
     type: Schema.Types.ObjectId,
