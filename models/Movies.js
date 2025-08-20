@@ -11,6 +11,9 @@ const movieSchema = new Schema({
   image: {
     type: String, 
     required: true
+  },
+  rating: {
+    type: Number
   }
 }, { timestamps: true });
 
