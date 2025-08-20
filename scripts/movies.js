@@ -7,49 +7,49 @@ const Movies = [
     name: "Top Gun: Maverick",
     description: "A fighter pilot story.",
     image:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ubuy.com.bh%2Fen%2Fproduct%2F52YIZZBUQ-top-gun-maverick-movie-poster-quality-glossy-print-photo-wall-art-tom-cruise-jennifer-connelly-sizes-11x17-16x20-22x28-24x36-27x40-1%3Fsrsltid%3DAfmBOoosQyneFek1jYXLXGPSbuOhxc4a-26mgTLrj0vuTjmYy_5mqi9b&psig=AOvVaw2sE7T0KErk7kbRx2soTsUT&ust=1755671656528000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCODG6d-glo8DFQAAAAAdAAAAABAE",
+    "https://sarahscoop.com/wp-content/uploads/2022/05/top-gun-maverick-351x520.jpg",
     rating: 4.5,
   },
   {
     name: "Zootopia",
     description: "Animated city of animals.",
     image:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt2948356%2F&psig=AOvVaw0gdkcV2gDCraGhthTHcN3S&ust=1755671693698000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOih9vGglo8DFQAAAAAdAAAAABAE",
+    "https://upload.wikimedia.org/wikipedia/en/9/96/Zootopia_%28movie_poster%29.jpg",
     rating: 4.8,
   },
   {
     name: "Knives Out",
     description: "A whodunit mystery.",
     image:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt8946378%2F&psig=AOvVaw1igFhzUNQyqB4M8V2jPsn6&ust=1755671729874000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPDc7_-glo8DFQAAAAAdAAAAABAE",
+    "https://cdn.flickeringmyth.com/wp-content/uploads/2019/10/Knives-Out-Poster.jpg",
     rating: 4.6,
   },
   {
     name: "The Incredibles",
     description: "Family of superheroes.",
     image:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0317705%2F&psig=AOvVaw3uoMhLcoGGsZOZfz6hOgPr&ust=1755671763297000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCODg94-hlo8DFQAAAAAdAAAAABAE",
+    "https://m.media-amazon.com/images/I/813KgYkrr0L.jpg",
     rating: 4.7,
   },
   {
     name: "Shrek",
     description: "An ogre's adventure.",
     image:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.themoviedb.org%2Fmovie%2F808-shrek%2Fimages%2Fposters&psig=AOvVaw2qYFXXBmrWFGfeIHfUmZ0i&ust=1755671791537000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCIiD156hlo8DFQAAAAAdAAAAABAe",
+    "https://cdn11.bigcommerce.com/s-yzgoj/images/stencil/1280x1280/products/2884405/5949450/MOVCF4359__64891.1679594547.jpg",
     rating: 4.5,
   },
   {
     name: "Spider-Man: Into the Spider-Verse",
     description: "Animated Spider-Man story.",
     image:
-      "shttps://i5.walmartimages.com/seo/Spider-Man-Into-The-Spider-Verse-Marvel-Comics-Movie-Poster-Fall_4660a869-3feb-44ba-a2f2-03fb7323fc26.1aa464250f9ff64fbcae45ca110e76e8.jpeg",
+    "https://images.squarespace-cdn.com/content/v1/59726394a803bb897c66108b/1545102243499-K40ND0GVFW4OHIVRWA2A/Spider-Man-Into-the-Spider-Verse-poster.jpg",
     rating: 4.9,
   },
   {
     name: "Guardians of the Galaxy",
     description: "Space superhero team.",
     image:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt2015381%2F&psig=AOvVaw1hPVWM_WxsSUcRQVr5VIoy&ust=1755671886794000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJi0rcuhlo8DFQAAAAAdAAAAABAE",
+    "https://www.themoviedb.org/t/p/original/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
     rating: 4.6,
   },
   {
@@ -110,7 +110,7 @@ const Movies = [
   },
   {
     name: "Paddington",
-    description: "Virtual reality action.",
+    description: " bear travels to London in search of a home",
     image:
       "https://image.tmdb.org/t/p/original/zmjkio6b35WZUBTFRP7yLSO94bq.jpg",
     rating: 4.7,
@@ -147,5 +147,6 @@ mongoose.connect(process.env.DB_URI);
 mongoose.connection.on("connected", () => {
   console.log("connected to mongoose");
 });
-
+Movie.collection.drop()
 Movie.insertMany(Movies);
+
